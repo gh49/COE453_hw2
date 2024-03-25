@@ -1,0 +1,57 @@
+swagger: "2.0"
+info:
+  title: hw2api
+  description: API for hw2
+  version: 1.0.0
+
+host: gateway.apigateway.dev-splice-415319.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /add:
+    post:
+      operationId: add
+      summary: add two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-dev-splice-415319.cloudfunctions.net/add
+  /sub:
+    post:
+      operationId: sub
+      summary: subtract two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-dev-splice-415319.cloudfunctions.net/sub
+  /mul:
+    post:
+      operationId: mul
+      summary: multiply two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-dev-splice-415319.cloudfunctions.net/mul
+  /div:
+    post:
+      operationId: div
+      summary: divide two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-dev-splice-415319.cloudfunctions.net/div
