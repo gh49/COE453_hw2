@@ -1,0 +1,56 @@
+swagger: "2.0"
+info:
+  title: hw3apitask2
+  description: API for hw3 task2
+  version: 1.0.0
+
+host: gateway.apigateway.dev-splice-415319.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+paths:
+  /add:
+    post:
+      operationId: addContainer
+      summary: add two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://addcontainer-w7tluuo33a-uc.a.run.app/add
+  /sub:
+    post:
+      operationId: subContainer
+      summary: sub two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://sub-w7tluuo33a-uc.a.run.app/sub
+  /mul:
+    post:
+      operationId: mulContainer
+      summary: mul two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://mul-w7tluuo33a-uc.a.run.app/mul
+  /div:
+    post:
+      operationId: divContainer
+      summary: div two numbers
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://div-w7tluuo33a-uc.a.run.app/div
